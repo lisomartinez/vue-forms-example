@@ -17,14 +17,9 @@ export default {
   props: ['modelValue'],
   emits: ['update:modelValue'],
   name: 'RatingControl',
-  data() {
-    return {
-      activeOption: this.modelValue
-    };
-  },
+
   methods: {
     activate(option) {
-      this.activeOption = option;
       this.$emit('update:modelValue', option)
     }
   }
